@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name         = "OpenCV"
   s.version      = "2.4.3.2"
   s.summary      = "OpenCV (Computer Vision) for iOS."
-  s.homepage     = "https://github.com/Fl0p/OpenCV-iOS"
+  s.homepage     = "https://github.com/jbajor/OpenCV-iOS"
   s.description  = <<-DESC
     OpenCV: open source computer vision library
 
@@ -59,14 +59,13 @@ Pod::Spec.new do |s|
   s.author       = "opencv.org"
 
   s.source       = { 
-    :git => "https://github.com/Fl0p/OpenCV-iOS.git", 
+    :git => "https://github.com/jbajor/OpenCV-iOS.git", 
     :tag => "2.4.3.2"
   }
-  s.source_files = 'opencv2.framework/Headers/**/*{.h,.hpp}'
+  s.source_files = 'opencv2.framework/Headers/**/*{.h}'
   s.header_mappings_dir = 'Headers'
   s.preserve_paths = 'opencv2.framework'
   s.platform     = :ios
-  s.libraries    = 'c++', 'stdc++'  
   s.frameworks = 'Accelerate', 'AssetsLibrary', 'AVFoundation', 'CoreGraphics', 'CoreImage', 'CoreMedia', 'CoreVideo', 'Foundation', 'opencv2', 'QuartzCore', 'UIKit'
   s.xcconfig = { 'FRAMEWORK_SEARCH_PATHS' => '$(PODS_ROOT)/OpenCV' }
 end
